@@ -30,7 +30,8 @@ plugins/ios.json
 $RECYCLE.BIN/
 postgres_dev/
 logfile
-
+[travis]
+  slug = dben89x/monolith-to-microservices-project
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
