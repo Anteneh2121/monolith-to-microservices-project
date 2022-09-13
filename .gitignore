@@ -30,8 +30,7 @@ plugins/ios.json
 $RECYCLE.BIN/
 postgres_dev/
 logfile
-[travis]
-  slug = dben89x/my-repo
+
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
