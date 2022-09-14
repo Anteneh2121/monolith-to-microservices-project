@@ -2,8 +2,8 @@ version: "3"
 services:
   reverseproxy:
       build:
-         context: ./udagram-reverse-proxy
-      image: antenehse/reverseproxy
+         
+      image: reverseproxy
       ports:
           - 8080:8080
       restart: always
