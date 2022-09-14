@@ -4,7 +4,7 @@ version: 2.1
 executors:
   docker-publisher: 
     environment:
-      IMAGE_NAME: antenehse/reverseproxy
+      IMAGE_NAME: reverseproxy
     docker: # Each job requires specifying an executor
     # (either docker, macos, or machine), see
       - image: circleci/node:latest
