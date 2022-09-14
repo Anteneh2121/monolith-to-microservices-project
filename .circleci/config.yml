@@ -4,7 +4,7 @@ version: 2.1
 executors:
   docker-publisher: 
     environment:
-      IMAGE_NAME: reverseproxy
+      IMAGE_NAME: antenehse/reverseproxy
     docker: # Each job requires specifying an executor
     # (either docker, macos, or machine), see
       - image: circleci/node:latest
@@ -23,7 +23,7 @@ jobs:
         - run: 
             name: Publish Docker Image to Docker Hub
             command: |
-              
+              set COMPOSE_TLS_VERSION=TLSv1_2
               curl -L https://github.com/docker/compose/releases/download/1.29.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
               chmod +x ~/docker-compose
               sudo mv ~/docker-compose /usr/local/bin/docker-compose
