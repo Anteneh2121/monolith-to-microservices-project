@@ -1,8 +1,6 @@
 version: "3"
 services:
   reverseproxy:
-      build:
-         
       image: reverseproxy
       ports:
           - 8080:8080
