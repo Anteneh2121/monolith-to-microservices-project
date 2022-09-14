@@ -44,7 +44,7 @@ jobs:
 
             docker push antenehse/udagram-api-feed
             docker push antenehse/udagram-api-user
-            docker push antenehse/udagram-frontend:local
+            docker push antenehse/udagram-frontend
             docker push antenehse/reverseproxy
 
 workflows:
