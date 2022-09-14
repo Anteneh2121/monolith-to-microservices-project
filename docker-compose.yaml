@@ -1,7 +1,9 @@
 version: "3"
 services:
   reverseproxy:
-      image: antenehse/reverseproxy
+    build:
+      context: ./udagram-reverse-proxy
+    image: antenehse/reverseproxy
       ports:
           - 8080:8080
       restart: always
@@ -9,6 +11,8 @@ services:
         - backend-user
         - backend-feed
   backend-user:
+    build:
+      context: ./udagram-api-user
     image: antenehse/udagram-api-user
     environment:
       POSTGRES_USERNAME: $POSTGRES_USERNAME
@@ -21,6 +25,8 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
+    build:
+      context: ./udagram-api-feed
     image: antenehse/udagram-api-feed
     volumes:
       - $HOME/.aws:/root/.aws
@@ -35,6 +41,8 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   frontend:
+    build:
+      context: ./udagram-frontend
     image: antenehse/udagram-frontend:local
     ports:
       - "8100:80"
