@@ -1,5 +1,4 @@
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Anteneh2121/monolith-to-microservices-project/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Anteneh2121/monolith-to-microservices-project/tree/main)
 
 # Udagram Image Filtering Application
 
